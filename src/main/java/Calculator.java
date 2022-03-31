@@ -16,63 +16,79 @@ public class Calculator {
         // Take input from the user
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the numbers");
+        System.out.println("Use calculator?");
+        String answer = sc.nextLine();
+        if (calculator.use(answer)) {
 
-        // take the inputs
-        num1 = sc.nextDouble();
+            System.out.println("Enter the numbers");
 
-        num2 = sc.nextDouble();
+            // take the inputs
+            num1 = sc.nextDouble();
 
-        System.out.println("Enter the operator (+,-,*,/)");
+            num2 = sc.nextDouble();
 
-        char op = sc.next().charAt(0);
+            System.out.println("Enter the operator (+,-,*,/)");
 
-        double o = 0;
+            char op = sc.next().charAt(0);
 
-        switch (op) {
+            double o = 0;
 
-
-            case '+':
-
-                calculator.addition(num1, num2);
-
-                break;
+            switch (op) {
 
 
-            case '-':
+                case '+':
 
-                calculator.subtraction(num1, num2);
+                    calculator.addition(num1, num2);
 
-                break;
-
-
-            case '*':
-
-                calculator.multiplication(num1, num2);
-
-                break;
+                    break;
 
 
-            case '/':
+                case '-':
 
-                calculator.divided(num1, num2);
+                    calculator.subtraction(num1, num2);
 
-                break;
+                    break;
 
-            default:
 
-                System.out.println("You enter wrong input");
+                case '*':
 
-                break;
+                    calculator.multiplication(num1, num2);
+
+                    break;
+
+
+                case '/':
+
+                    calculator.divided(num1, num2);
+
+                    break;
+
+                default:
+
+                    System.out.println("You enter wrong input");
+
+                    break;
+            }
+
+            System.out.println("The final result:");
+
+            System.out.println();
+
+
+            System.out.println(num1 + " " + op + " " + num2
+                    + " = " + o);
+        } else {
+            System.out.println("Calculator stopped");
+        }
         }
 
-        System.out.println("The final result:");
-
-        System.out.println();
 
 
-        System.out.println(num1 + " " + op + " " + num2
-                + " = " + o);
+    public boolean use (String a) {if (a.equalsIgnoreCase("yes")) {
+        return true;
+    } else {
+        return false;
+    }
     }
     public double subtraction (double a, double b) {
         return a - b;
