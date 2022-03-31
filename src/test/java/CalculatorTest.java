@@ -23,20 +23,20 @@ class CalculatorTest {
 
     @Test
     void subtraction() {
-        double answer = calculator.subtracion(2,2);
-        Assertions.assertEquals(4,answer);
+        double answer = calculator.subtraction(5,2);
+        Assertions.assertEquals(3,answer);
     }
 
     @Test
     void multiplication() {
-        double answer = calculator.multiplication(2,2);
-        Assertions.assertEquals(4,answer);
+        double answer = calculator.multiplication(10,2);
+        Assertions.assertEquals(20,answer);
     }
 
     @Test
     void divided() {
-        double answer = calculator.divided(2,2);
-        Assertions.assertEquals(4,answer);
+        double answer = calculator.divided(100,2);
+        Assertions.assertEquals(50,answer);
     }
 
 }

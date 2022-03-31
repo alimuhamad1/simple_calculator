@@ -41,7 +41,7 @@ public class Calculator {
 
             case '-':
 
-                calculator.subtracion(num1, num2);
+                calculator.subtraction(num1, num2);
 
                 break;
 
@@ -74,7 +74,7 @@ public class Calculator {
         System.out.println(num1 + " " + op + " " + num2
                 + " = " + o);
     }
-    public double subtracion (double a, double b) {
+    public double subtraction (double a, double b) {
         return a - b;
     }
 
